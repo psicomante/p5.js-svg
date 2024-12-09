@@ -47,7 +47,8 @@ export default function (p5: P5SVG) {
             }
         })
 
-        p5.Renderer2D.call(this, elt, pInstProxy, isMainCanvas)
+        // fix: p5.js@1.7.0+ (zenozeng#254,zenozeng#255,zenozeng#258) by nkymut
+        Object.assign(this, p5.Renderer2D.call(this, elt, pInstProxy, isMainCanvas))
 
         this.isSVG = true
         this.svg = svg
