@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.3.9"
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
   },
   "dependencies": {
     "p5": "^1.6.0",
-    "p5.js-svg": "^1.5.1"
+    "p5.js-svg": "../.."
   }
 }

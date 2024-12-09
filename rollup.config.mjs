@@ -9,7 +9,8 @@ export default [
         output: {
             file: 'dist/p5.svg.js',
             format: 'iife',
-            sourcemap: true
+            sourcemap: true,
+            name: 'p5svg'
         },
         plugins: [typescript(), resolve(), commonjs()]
     },
@@ -19,9 +20,19 @@ export default [
         output: {
             file: 'dist/p5.svg.cjs.js',
             format: 'cjs',
+            sourcemap: true,
+            name: 'p5svg'
+        },
+        plugins: [resolve(), typescript(), commonjs()]
+    },
+    {
+        input: 'src/index.ts',
+        output: {
+            file: 'dist/p5.svg.esm.js',
+            format: 'esm',
             sourcemap: true
         },
-        plugins: [typescript(), resolve(), commonjs()]
+        plugins: [resolve(), typescript(), commonjs()]
     },
     // test
     {
@@ -29,7 +40,8 @@ export default [
         output: {
             file: 'dist/test.js',
             format: 'iife',
-            sourcemap: true
+            sourcemap: true,
+            name: 'p5svg'
         },
         plugins: [resolve(), commonjs()]
     }
